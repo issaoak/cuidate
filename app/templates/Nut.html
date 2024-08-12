@@ -1,0 +1,82 @@
+{% extends "plantillauser.html" %}
+{% block body %}
+
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/nut.css') }}">
+<body>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row shadowed-section">
+                <div class="col-md-4 text-center">
+                    <img src="{{ url_for('static', filename='IMG/Nutriologo.webp') }}" alt="Perfil" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-8">
+                    <h2>Arturo</h2>
+                    <p>Soy nutriólogo certificado con más de 10 años de experiencia en ayudar a personas a mejorar su salud a través de una alimentación adecuada. Mi enfoque está en crear planes de alimentación personalizados que se adapten a tus necesidades y objetivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='IMG/Plan-Alimentacion.webp') }}" alt="Planes de Alimentación Personalizados">
+                        <div class="card-body">
+                            <h5 class="card-title">Planes de Alimentación</h5>
+                            <p class="card-text">Dietas equilibradas y personalizadas para mejorar tu salud y rendimiento.</p>
+                            <a href="PlanA.html" class="btn btn-primary">Ver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='IMG/Dieta.webp') }}" alt="Pérdida de Peso">
+                        <div class="card-body">
+                            <h5 class="card-title">Dieta</h5>
+                            <p class="card-text">Programas de nutrición diseñados para ayudarte a perder peso de manera saludable.</p>
+                            <a href="dieta.html" class="btn btn-primary">Ver</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>Testimonios</h2>
+            <p>"Las dietas personalizadas me han ayudado a sentirme mejor y más enérgico cada día." - Laura G.</p>
+            <p>"Gracias a sus consejos de nutrición, he logrado mantener un peso saludable y mejorar mi salud en general." - Carlos M.</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Para más información o para agendar una consulta, por favor, contáctame a través del siguiente formulario:</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Tu mensaje"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    
+    {% endblock %}

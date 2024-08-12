@@ -1,0 +1,30 @@
+
+
+services:
+  web:
+    build: .
+    container_name: flask_app
+    restart: always
+    ports:
+      - "6001:6000"  # Cambia el puerto externo a 5001 si el 5000 está en uso
+    depends_on:
+      - db
+    environment:
+      MYSQL_HOST: db  # Este debe coincidir con el nombre del servicio de la base de datos
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DB: cuidatedivirtiendote
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3309:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

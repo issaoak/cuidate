@@ -1,0 +1,238 @@
+{% extends "plantillauser.html" %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ejp.css') }}">
+   
+    <section id="exercise-plans" class="section bg-light">
+        <div class="container">
+            <h2>Ejercicios Personalizados</h2>
+            <div class="exercise-list">
+                <div class="flashcard" onclick="toggleDescription('desc1')">
+                    <img src="{{ url_for('static', filename='IMG/sentadillas.webp') }}" alt="Sentadillas" class="flashcard-image">
+                    <div class="flashcard-text">Sentadillas</div>
+                    <div id="desc1" class="exercise-description">
+                        <h5>Sentadillas</h5>
+                        <p>Repeticiones: 3 series de 12 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc2')">
+                    <img src="{{ url_for('static', filename='IMG/Flexionespecho.webp') }}" alt="Flexiones de pecho" class="flashcard-image">
+                    <div class="flashcard-text">Flexiones de pecho</div>
+                    <div id="desc2" class="exercise-description">
+                        <h5>Flexiones de pecho</h5>
+                        <p>Repeticiones: 3 series de 15 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc3')">
+                    <img src="{{ url_for('static', filename='IMG/Pesomuerto.webp') }}" alt="Peso muerto" class="flashcard-image">
+                    <div class="flashcard-text">Peso muerto</div>
+                    <div id="desc3" class="exercise-description">
+                        <h5>Peso muerto</h5>
+                        <p>Repeticiones: 3 series de 10 repeticiones</p>
+                        <p>Duración: 1.5 minutos por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc4')">
+                    <img src="{{ url_for('static', filename='IMG/Pesobanca.webp') }}" alt="Press de banca" class="flashcard-image">
+                    <div class="flashcard-text">Press de banca</div>
+                    <div id="desc4" class="exercise-description">
+                        <h5>Press de banca</h5>
+                        <p>Repeticiones: 3 series de 12 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc5')">
+                    <img src="{{ url_for('static', filename='IMG/dominadas.webp') }}" alt="Dominadas" class="flashcard-image">
+                    <div class="flashcard-text">Dominadas</div>
+                    <div id="desc5" class="exercise-description">
+                        <h5>Dominadas</h5>
+                        <p>Repeticiones: 3 series de 8 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc6')">
+                    <img src="{{ url_for('static', filename='IMG/Zancadas.webp') }}" alt="Zancadas" class="flashcard-image">
+                    <div class="flashcard-text">Zancadas</div>
+                    <div id="desc6" class="exercise-description">
+                        <h5>Zancadas</h5>
+                        <p>Repeticiones: 3 series de 12 repeticiones por pierna</p>
+                        <p>Duración: 1.5 minutos por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc7')">
+                    <img src="{{ url_for('static', filename='IMG/Remomancuernas.webp') }}" alt="Remo con mancuernas" class="flashcard-image">
+                    <div class="flashcard-text">Remo con mancuernas</div>
+                    <div id="desc7" class="exercise-description">
+                        <h5>Remo con mancuernas</h5>
+                        <p>Repeticiones: 3 series de 10 repeticiones</p>
+                        <p>Duración: 1.5 minutos por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc8')">
+                    <img src="{{ url_for('static', filename='IMG/Plancha.webp') }}" alt="Plancha" class="flashcard-image">
+                    <div class="flashcard-text">Plancha</div>
+                    <div id="desc8" class="exercise-description">
+                        <h5>Plancha</h5>
+                        <p>Repeticiones: 3 series</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc9')">
+                    <img src="{{ url_for('static', filename='IMG/Pressmilitar.webp') }}" alt="Press militar" class="flashcard-image">
+                    <div class="flashcard-text">Press militar</div>
+                    <div id="desc9" class="exercise-description">
+                        <h5>Press militar</h5>
+                        <p>Repeticiones: 3 series de 10 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc10')">
+                    <img src="{{ url_for('static', filename='IMG/Elevacioneslaterales.webp') }}" alt="Elevaciones laterales" class="flashcard-image">
+                    <div class="flashcard-text">Elevaciones laterales</div>
+                    <div id="desc10" class="exercise-description">
+                        <h5>Elevaciones laterales</h5>
+                        <p>Repeticiones: 3 series de 15 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc11')">
+                    <img src="{{ url_for('static', filename='IMG/Curlbiceps.webp') }}" alt="Curl de bíceps" class="flashcard-image">
+                    <div class="flashcard-text">Curl de bíceps</div>
+                    <div id="desc11" class="exercise-description">
+                        <h5>Curl de bíceps</h5>
+                        <p>Repeticiones: 3 series de 12 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc12')">
+                    <img src="{{ url_for('static', filename='IMG/Extensionestriceps.webp') }}" alt="Extensiones de tríceps" class="flashcard-image">
+                    <div class="flashcard-text">Extensiones de tríceps</div>
+                    <div id="desc12" class="exercise-description">
+                        <h5>Extensiones de tríceps</h5>
+                        <p>Repeticiones: 3 series de 12 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc13')">
+                    <img src="{{ url_for('static', filename='IMG/Abdominalesbicicleta.webp') }}" alt="Abdominales en bicicleta" class="flashcard-image">
+                    <div class="flashcard-text">Abdominales en bicicleta</div>
+                    <div id="desc13" class="exercise-description">
+                        <h5>Abdominales en bicicleta</h5>
+                        <p>Repeticiones: 3 series de 20 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc14')">
+                    <img src="{{ url_for('static', filename='IMG/Elevacionestalones.webp') }}" alt="Elevaciones de talones" class="flashcard-image">
+                    <div class="flashcard-text">Elevaciones de talones</div>
+                    <div id="desc14" class="exercise-description">
+                        <h5>Elevaciones de talones</h5>
+                        <p>Repeticiones: 3 series de 15 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc15')">
+                    <img src="{{ url_for('static', filename='IMG/Cardio.webp') }}" alt="Cardio" class="flashcard-image">
+                    <div class="flashcard-text">Cardio</div>
+                    <div id="desc15" class="exercise-description">
+                        <h5>Cardio</h5>
+                        <p>Repeticiones: 1 sesión</p>
+                        <p>Duración: 30 minutos</p>
+                    </div>
+                </div>
+                <div class="flashcard" onclick="toggleDescription('desc16')">
+                    <img src="{{ url_for('static', filename='IMG/Burpees.webp') }}" alt="Burpees" class="flashcard-image">
+                    <div class="flashcard-text">Burpees</div>
+                    <div id="desc16" class="exercise-description">
+                        <h5>Burpees</h5>
+                        <p>Repeticiones: 3 series de 10 repeticiones</p>
+                        <p>Duración: 1 minuto por serie</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rutina Semanal -->
+            <div class="weekly-routine">
+                <h3>Plan de ejercicios Semanal</h3>
+                <table class="routine-table">
+                    <thead>
+                        <tr>
+                            <th>Día</th>
+                            <th>Ejercicio</th>
+                            <th>Repeticiones</th>
+                            <th>Duración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunes</td>
+                            <td>Sentadillas, Flexiones de pecho, Plancha</td>
+                            <td>3x12, 3x15, 3 series</td>
+                            <td>1 min/serie, 1 min/serie, 1 min/serie</td>
+                        </tr>
+                        <tr>
+                            <td>Martes</td>
+                            <td>Peso muerto, Press de banca, Curl de bíceps</td>
+                            <td>3x10, 3x12, 3x12</td>
+                            <td>1.5 min/serie, 1 min/serie, 1 min/serie</td>
+                        </tr>
+                        <tr>
+                            <td>Miércoles</td>
+                            <td>Dominadas, Zancadas, Extensiones de tríceps</td>
+                            <td>3x8, 3x12 por pierna, 3x12</td>
+                            <td>1 min/serie, 1.5 min/serie, 1 min/serie</td>
+                        </tr>
+                        <tr>
+                            <td>Jueves</td>
+                            <td>Remo con mancuernas, Elevaciones laterales, Abdominales en bicicleta</td>
+                            <td>3x10, 3x15, 3x20</td>
+                            <td>1.5 min/serie, 1 min/serie, 1 min/serie</td>
+                        </tr>
+                        <tr>
+                            <td>Viernes</td>
+                            <td>Press militar, Elevaciones de talones, Burpees</td>
+                            <td>3x10, 3x15, 3x10</td>
+                            <td>1 min/serie, 1 min/serie, 1 min/serie</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>Cardio</td>
+                            <td>1 sesión</td>
+                            <td>30 min</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>Descanso</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script>
+// Asegúrate de que este mensaje se vea en la consola
+console.log("Archivo JavaScript cargado.");
+
+function toggleDescription(id) {
+    console.log("toggleDescription llamado con id:", id);
+    var description = document.getElementById(id);
+    if (description) {
+        // Comprobamos si el elemento tiene la clase 'show'
+        if (description.classList.contains('show')) {
+            // Si la clase 'show' está presente, la removemos
+            description.classList.remove('show');
+        } else {
+            // Si la clase 'show' no está presente, la agregamos
+            description.classList.add('show');
+        }
+    } else {
+        console.error("No se encontró el elemento con id:", id);
+    }
+}
+    </script>
+{% endblock %}
